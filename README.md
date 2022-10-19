@@ -1,7 +1,12 @@
-<h3>DateConverter</h3
+<h3>DateConverter</h3>
 Este proyecto convierte formato de fechas, de String a Date, y de Date a String
 
+<h3>Indicaciones</h3>
+Para convertir diferentes patrones de fechas, cambie el pattern por el deseado
+
 <h3>Documentacion extra (Oracle oficial)</h3>
+En la siguiente documentación estan los diferentes patrones con sus respectivos ejemplos,
+y muchas explicaciones sobre cada uno:
 https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 
 <h3>Autor</h3>
