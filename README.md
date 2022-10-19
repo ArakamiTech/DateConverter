@@ -2,7 +2,9 @@
 Este proyecto convierte formato de fechas, de String a Date, y de Date a String
 
 <h3>Indicaciones</h3>
-Para convertir diferentes patrones de fechas, cambie el pattern por el deseado
+Para convertir diferentes patrones de fechas, cambie el pattern por el deseado.
+Cambiar de String a Date solo tiene un pattern (ddd, dd MMM yyyy HH':'mm':'ss 'GMT'), con eso es suficiente para manejar las BD,
+Si quieres cambiar de String a Date y el resultado a String con cualquier pattern, une las funciones, es tu ejercicio de practica ;)
 
 <h3>Documentacion extra (Oracle oficial)</h3>
 En la siguiente documentación estan los diferentes patrones con sus respectivos ejemplos,
