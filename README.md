@@ -7,42 +7,43 @@ Cambiar de String a Date solo tiene un pattern (ddd, dd MMM yyyy HH':'mm':'ss 'G
 Si quieres cambiar de String a Date y el resultado a String con cualquier pattern, une las funciones, es tu ejercicio de practica ;)
 
 <h3>Patterns</h3>
-
-MM/dd/yyyy                               08/28/2014
-yyyy-MM-dd                               2014-08-28
-dddd, dd MMMM yyyy                       Thursday, 28 August 2014
-dddd, dd MMMM yyyy HH:mm                 Thursday, 28 August 2014 12:28
-dddd, dd MMMM yyyy hh:mm tt              Thursday, 28 August 2014 12:28 PM
-dddd, dd MMMM yyyy H:mm                  Thursday, 28 August 2014 12:28
-dddd, dd MMMM yyyy h:mm tt               Thursday, 28 August 2014 12:28 PM
-dddd, dd MMMM yyyy HH:mm:ss              Thursday, 28 August 2014 12:28:30
-MM/dd/yyyy HH:mm                         08/28/2014 12:28
-MM/dd/yyyy hh:mm tt                      08/28/2014 12:28 PM
-MM/dd/yyyy H:mm                          08/28/2014 12:28
-MM/dd/yyyy h:mm tt                       08/28/2014 12:28 PM
-yyyy-MM-dd HH:mm                         2014-08-28 12:28
-yyyy-MM-dd hh:mm tt                      2014-08-28 12:28 PM
-yyyy-MM-dd H:mm                          2014-08-28 12:28
-yyyy-MM-dd h:mm tt                       2014-08-28 12:28 PM
-MM/dd/yyyy HH:mm:ss                      08/28/2014 12:28:30
-yyyy-MM-dd HH:mm:ss                      2014-08-28 12:28:30
-MMMM dd                                  August 28
-MMMM dd                                  August 28
-yyyy'-'MM'-'dd'T'HH':'mm':'ss.fffffffK   2014-08-28T12:28:30.0000000
-yyyy'-'MM'-'dd'T'HH':'mm':'ss.fffffffK   2014-08-28T12:28:30.0000000
-ddd, dd MMM yyyy HH':'mm':'ss 'GMT'      Thu, 28 Aug 2014 12:28:30 GMT
-ddd, dd MMM yyyy HH':'mm':'ss 'GMT'      Thu, 28 Aug 2014 12:28:30 GMT
-yyyy'-'MM'-'dd'T'HH':'mm':'ss            2014-08-28T12:28:30
-HH:mm                                    12:28
-hh:mm tt                                 12:28 PM
-H:mm                                     12:28
-h:mm tt                                  12:28 PM
-HH:mm:ss                                 12:28:30
-yyyy'-'MM'-'dd HH':'mm':'ss'Z'           2014-08-28 12:28:30Z
-dddd, dd MMMM yyyy HH:mm:ss              Thursday, 28 August 2014 12:28:30
-yyyy MMMM                                2014 August
-yyyy MMMM                                2014 August
-
+<br>
+<table>
+<tr><td>MM/dd/yyyy</td><td>08/28/2014</td></tr>
+<tr><td>yyyy-MM-dd</td><td>2014-08-28</td></tr>
+<tr><td>dddd, dd MMMM yyyy</td><td>Thursday, 28 August 2014</td></tr>
+<tr><td>dddd, dd MMMM yyyy HH:mm</td><td>Thursday, 28 August 2014 12:28</td></tr>
+<tr><td>dddd, dd MMMM yyyy hh:mm tt</td><td>Thursday, 28 August 2014 12:28 PM</td></tr>
+<tr><td>dddd, dd MMMM yyyy H:mm</td><td>Thursday, 28 August 2014 12:28</td></tr>
+<tr><td>dddd, dd MMMM yyyy h:mm tt</td><td>Thursday, 28 August 2014 12:28 PM</td></tr>
+<tr><td>dddd, dd MMMM yyyy HH:mm:ss</td><td>Thursday, 28 August 2014 12:28:30</td></tr>
+<tr><td>MM/dd/yyyy HH:mm</td><td>08/28/2014 12:28</td></tr>
+<tr><td>MM/dd/yyyy hh:mm tt</td><td>08/28/2014 12:28 PM</td></tr>
+<tr><td>MM/dd/yyyy H:mm</td><td>08/28/2014 12:28</td></tr>
+<tr><td>MM/dd/yyyy h:mm tt</td><td>08/28/2014 12:28 PM</td></tr>
+<tr><td>yyyy-MM-dd HH:mm</td><td>2014-08-28 12:28</td></tr>
+<tr><td>yyyy-MM-dd hh:mm tt</td><td>2014-08-28 12:28 PM</td></tr>
+<tr><td>yyyy-MM-dd H:mm</td><td>2014-08-28 12:28</td></tr>
+<tr><td>yyyy-MM-dd h:mm tt</td><td>2014-08-28 12:28 PM</td></tr>
+<tr><td>MM/dd/yyyy HH:mm:ss</td><td>08/28/2014 12:28:30</td></tr>
+<tr><td>yyyy-MM-dd HH:mm:ss</td><td>2014-08-28 12:28:30</td></tr>
+<tr><td>MMMM dd</td><td>August 28</td></tr>
+<tr><td>MMMM dd</td><td>August 28</td></tr>
+<tr><td>yyyy'-'MM'-'dd'T'HH':'mm':'ss.fffffffK</td><td>2014-08-28T12:28:30.0000000</td></tr>
+<tr><td>yyyy'-'MM'-'dd'T'HH':'mm':'ss.fffffffK</td><td>2014-08-28T12:28:30.0000000</td></tr>
+<tr><td>ddd, dd MMM yyyy HH':'mm':'ss 'GMT'</td><td>Thu, 28 Aug 2014 12:28:30 GMT</td></tr>
+<tr><td>ddd, dd MMM yyyy HH':'mm':'ss 'GMT'</td><td>Thu, 28 Aug 2014 12:28:30 GMT</td></tr>
+<tr><td>yyyy'-'MM'-'dd'T'HH':'mm':'ss</td><td>2014-08-28T12:28:30</td></tr>
+<tr><td>HH:mm</td><td>12:28</td></tr>
+<tr><td>hh:mm tt</td><td>12:28 PM</td></tr>
+<tr><td>H:mm</td><td>12:28</td></tr>
+<tr><td>h:mm tt</td><td>12:28 PM</td></tr>
+<tr><td>HH:mm:ss</td><td>12:28:30</td></tr>
+<tr><td>yyyy'-'MM'-'dd HH':'mm':'ss'Z'</td><td>2014-08-28 12:28:30Z</td></tr>
+<tr><td>dddd, dd MMMM yyyy HH:mm:ss</td><td>Thursday, 28 August 2014 12:28:30</td></tr>
+<tr><td>yyyy MMMM</td><td>2014 August</td></tr>
+<tr><td>yyyy MMMM</td><td>2014 August</td></tr>
+</table>
 <h3>Documentacion extra (Oracle oficial)</h3>
 En la siguiente documentación estan los diferentes patrones con sus respectivos ejemplos,
 y muchas explicaciones sobre cada uno:
