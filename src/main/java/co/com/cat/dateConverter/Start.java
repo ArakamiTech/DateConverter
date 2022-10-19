@@ -16,6 +16,7 @@ public class Start extends javax.swing.JFrame {
     public Start() {
         initComponents();
         this.setTitle("DateConverter From ArakamiTech");
+        this.setLocation(600, 400);
     }
 
     /**
@@ -34,6 +35,7 @@ public class Start extends javax.swing.JFrame {
         cbPatternOut = new javax.swing.JComboBox<>();
         btnDatetoString = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnStringtoString = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,6 +68,13 @@ public class Start extends javax.swing.JFrame {
 
         jLabel1.setText("Fecha de hoy");
 
+        btnStringtoString.setText("Convertir Fecha String a String");
+        btnStringtoString.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStringtoStringActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -73,27 +82,28 @@ public class Start extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lDateOut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tfDate, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(4, 4, 4)))
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cbPatternOut, 0, 193, Short.MAX_VALUE)
+                            .addComponent(cbPatternOut, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cbPatternIn, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnDate)
-                            .addComponent(btnDatetoString)))
-                    .addComponent(lDateOut, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnDatetoString, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnStringtoString, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                            .addComponent(btnDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnDate)
                     .addComponent(tfDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -103,9 +113,11 @@ public class Start extends javax.swing.JFrame {
                     .addComponent(cbPatternOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDatetoString)
                     .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnStringtoString)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lDateOut, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();
@@ -131,6 +143,19 @@ public class Start extends javax.swing.JFrame {
         DateFormat df = new SimpleDateFormat(patternOut);
         lDateOut.setText("Fecha: " + df.format(new Date()));
     }//GEN-LAST:event_btnDatetoStringActionPerformed
+
+    private void btnStringtoStringActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStringtoStringActionPerformed
+        try {
+            String patternIn = cbPatternIn.getSelectedItem().toString();
+            String patternOut = cbPatternOut.getSelectedItem().toString();
+            DateFormat formatIn = new SimpleDateFormat(patternIn, Locale.ENGLISH);
+            DateFormat formatOut = new SimpleDateFormat(patternOut);
+            Date dateIn = formatIn.parse(tfDate.getText());
+            lDateOut.setText("Fecha: " + formatOut.format(dateIn));
+        } catch (ParseException ex) {
+            JOptionPane.showMessageDialog(null, "Error Parseando Fechas", "Error", 0);
+        }
+    }//GEN-LAST:event_btnStringtoStringActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,6 +193,7 @@ public class Start extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDate;
     private javax.swing.JButton btnDatetoString;
+    private javax.swing.JButton btnStringtoString;
     private javax.swing.JComboBox<String> cbPatternIn;
     private javax.swing.JComboBox<String> cbPatternOut;
     private javax.swing.JLabel jLabel1;

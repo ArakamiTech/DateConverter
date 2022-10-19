@@ -3,11 +3,9 @@ Este proyecto convierte formato de fechas, de String a Date, y de Date a String
 
 <h3>Indicaciones</h3>
 Para convertir diferentes patrones de fechas, cambie el pattern por el deseado.
-Cambiar de String a Date solo tiene un pattern (ddd, dd MMM yyyy HH':'mm':'ss 'GMT'), con eso es suficiente para manejar las BD,
-Si quieres cambiar de String a Date y el resultado a String con cualquier pattern, une las funciones, es tu ejercicio de practica ;)
+Cambiar de String a Date solo tiene un pattern (ddd, dd MMM yyyy HH':'mm':'ss 'GMT'), con eso es suficiente para manejar las BD
 
 <h3>Patterns</h3>
-<br>
 <table>
 <tr><td>MM/dd/yyyy</td><td>08/28/2014</td></tr>
 <tr><td>yyyy-MM-dd</td><td>2014-08-28</td></tr>
