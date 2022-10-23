@@ -1,4 +1,4 @@
-package co.com.cat.dateConverter;
+package com.cat.dateConverter;
 
 import java.text.DateFormat;
 import java.text.ParseException;
